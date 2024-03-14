@@ -96,7 +96,7 @@
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
-        "starved_thermal": "error",
+        "starved_thermal": "ignore",
         "text_height": "warning",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
@@ -190,10 +190,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      "pin_to_pin|1066800|685800|99826b57-3eca-4d4e-8791-de93a6d18914|4740c8a1-79fb-46f6-a48a-24de8f823557|/6320cb9c-a8f8-4921-856c-dd9ecac4c251|/6320cb9c-a8f8-4921-856c-dd9ecac4c251|/6320cb9c-a8f8-4921-856c-dd9ecac4c251/2e422247-f02f-4cb3-84b7-f23c5e92f071",
-      "pin_to_pin|1066800|685800|99826b57-3eca-4d4e-8791-de93a6d18914|61416979-b06b-4482-90e4-9f6f67efbe42|/6320cb9c-a8f8-4921-856c-dd9ecac4c251|/6320cb9c-a8f8-4921-856c-dd9ecac4c251|/6320cb9c-a8f8-4921-856c-dd9ecac4c251/2e422247-f02f-4cb3-84b7-f23c5e92f071"
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -461,6 +458,14 @@
       {
         "netclass": "PWR",
         "pattern": "MCOM*"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "*{slash}+5V"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "*{slash}GND"
       }
     ]
   },
